@@ -1,25 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from "./components/Home"
+import Login from "./components/Login"
+import Course from './components/Course';
+import AddCourse from './components/AddCourse';
+import EditCourse from './components/EditCourse';
+import AddCourseModule from './components/AddCourseModule';
+import Module from './components/Module';
+import Register from './components/Register';
+import Manage from './components/Manage';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <BrowserRouter>
+     <Routes>
+      <Route path="/" element= {<Login/>} />
+      <Route path="/register" element= {<Register/>} />
+      <Route path="/home" element= {<Home/>} />
+      <Route path="/manage" element= {<Manage/>}  />
+      <Route path="/course" element= {<Course/>} />
+      <Route path="/addcourse" element= {<AddCourse/>} />
+      <Route path="/editcourse" element= {<EditCourse/>} />
+      <Route path="/addmodule" element= {<AddCourseModule/>} />
+      <Route path="/module" element= {<Module/>} />
+
+     </Routes>
+    </BrowserRouter>
+
 }
 
 export default App;

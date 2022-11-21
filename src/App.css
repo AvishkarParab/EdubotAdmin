@@ -1,5 +1,10 @@
+:root{
+  --primary:rgb(245, 111, 1);
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 .App {
   text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .App-logo {
@@ -35,4 +40,110 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navbar{
+  background: linear-gradient(var(--primary),rgba(238, 120, 23, 0.9),var(--primary));
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  color: white !important;
+}
+.linkItem{
+  text-decoration: none;
+  /* margin: 0px 15px; */
+  color: white;
+  font-size: 17px;
+  padding: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.is-active{
+  color: rgb(230, 245, 243);
+  border-bottom: 1.7px solid rgb(230, 235, 231);
+  text-decoration: none;
+  font-size: 17px;
+  padding: 5px;
+}
+.linkItem:hover,.is-active:hover{
+  transition: .2s all ease-in-out;
+  font-weight: 500;
+  color: rgb(242, 243, 253);
+
+}
+.logoutbtn{
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 6px 7px 2px 3px rgba(75, 75, 75, 0.252);
+  color: rgb(14, 56, 247);
+}
+.logoutbtn:hover{
+  background: transparent;
+  transition: .2s all ease-in-out;
+  color: white;
+  border: 1px solid rgba(33, 33, 33, 0.304);
+}
+
+/* login Page css */
+.loginForm{
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.courseDiv{
+  width: 100%;
+  height: 250px;
+  /* border: 1px solid red; */
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.courseDiv::-webkit-scrollbar{
+  background-color: rgba(0, 0, 0, 0.068);
+  height: .4rem;
+  border-radius: 12px;
+
+}
+.courseDiv::-webkit-scrollbar-thumb{
+  --webkit-appearance: none;
+  border-radius: 12px;
+  background-color: var(--primary);
+}
+.courseCard{
+  float: left;
+  margin-right: 20px;
+  height: 200px;
+  /* min-height: 100px !important; */
+  border: .01rem solid var(--primary) !important;
+  max-width: 53.333%;
+  /* padding: .75rem; */
+  margin-bottom: 2rem;
+  flex-basis: 15rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  box-shadow: 5px 6px 2px rgba(59, 59, 59, 0.614);
+  border-radius: 12px;
+
+}
+.courseCard:hover{
+  transition: .2s all ease-in-out;
+  background-color:#000000b7 ;
+  color: white !important;
+}
+.courseImg{
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  border-radius: 12px;
+  
+}
+.courselogo{
+  color: var(--primary);
+  font-size: 5rem;
 }
